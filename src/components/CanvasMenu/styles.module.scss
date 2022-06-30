@@ -1,0 +1,118 @@
+.canvasMenu {
+	width: 100%;
+	padding: 10px 15px;
+	border-radius: 5px;
+	background-color: #a3a3a32d;
+
+	input {
+		width: 100%;
+	}
+
+	input[type=range] {
+		-webkit-appearance: none;
+		height: 5px;
+		border-radius: 5px;
+		background: #d3d3d3;
+		outline: none;
+		opacity: 0.7;
+		-webkit-transition: .2s;
+		transition: opacity .2s;
+
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background: var(--primary);
+			cursor: pointer;
+		}
+
+		&::-moz-range-thumb {
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background: var(--primary);
+			cursor: pointer;
+		}
+	}
+
+	&__draw {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&_actions {
+
+			button {
+				&:first-child {
+					margin-right: 5px;
+				}
+
+				&:last-child {
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+
+
+	&__burgerButton {
+		display: none;
+	}
+
+	&__burgerMenu {
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		transition: transform .1s linear;
+		overflow-y: scroll;
+
+		padding: 20px 10px;
+
+		background: var(--card-blue);
+
+		&_content {
+			display: grid;
+			gap: 15px;
+			padding: 50px 0 0;
+		}
+
+		&_opened {
+			opacity: 1;
+			transform: translateX(0%) translateZ(0px);
+		}
+
+		&_closed {
+			opacity: 0;
+			transform: translateX(-100%) translateZ(0px);
+		}
+
+		&_closeButton {
+			position: fixed;
+			z-index: 11;
+			top: 15px;
+			left: 15px;
+		}
+	}
+
+}
+
+@media screen and (max-width: 575.98px) {
+	.canvasMenu {
+		gap: 10px;
+
+		&__draw {
+			display: none;
+
+			&_color {
+				justify-self: start;
+			}
+		}
+
+		&__burgerButton {
+			display: block;
+		}
+	}
+}

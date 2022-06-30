@@ -1,0 +1,11 @@
+.card {
+	border-radius: 10px;
+	background: var(--card);
+	color: var(--text-color);
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+
+	&_blue {
+		background: var(--card-blue);
+	}
+}
+

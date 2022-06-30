@@ -1,0 +1,32 @@
+.images {
+  margin-bottom: 20px;
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin: 20px 0;
+
+    &_notFound {
+      text-transform: uppercase;
+      margin: 0 auto;
+      color: var(--text-color);
+
+      h1 {
+        margin: 0;
+        font-size: 46px;
+        font-weight: 500;
+        line-height: 35px;
+      }
+    }
+  }
+
+  &__create {
+    button {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
