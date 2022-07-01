@@ -40,7 +40,7 @@ const ImagesList = () => {
 
   const handleClickCreateButton = () => {
     isOpened && dispatch(setIsOpened(false));
-    navigate("/draw");
+    navigate("/mini-paint/draw");
   };
 
   return (
