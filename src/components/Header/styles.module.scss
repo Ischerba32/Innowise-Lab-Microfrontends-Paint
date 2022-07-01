@@ -1,4 +1,4 @@
-.header {
+.paintHeader {
 	display: grid;
 	grid-template-columns: 1fr auto;
 	align-items: center;
@@ -67,7 +67,7 @@
 }
 
 @media screen and (max-width: 575.98px) {
-	.header {
+	.paintHeader {
 		gap: 10px;
 
 		&__actions {

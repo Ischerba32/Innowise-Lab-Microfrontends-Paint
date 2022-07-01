@@ -21,7 +21,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="/draw"
+          path="/mini-paint/draw"
           element={
             <AuthRoute>
               <Canvas />

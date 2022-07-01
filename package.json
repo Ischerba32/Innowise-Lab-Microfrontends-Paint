@@ -59,6 +59,7 @@
     "@types/systemjs": "^6.1.1",
     "@types/webpack-env": "^1.16.2",
     "css-loader": "^6.7.1",
+    "dotenv": "^16.0.1",
     "dotenv-webpack": "^7.1.1",
     "firebase": "^9.8.4",
     "moment": "^2.29.3",

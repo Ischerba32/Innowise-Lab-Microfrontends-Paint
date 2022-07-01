@@ -1,6 +1,7 @@
 import cn from "classnames";
 import { useDispatch, useSelector } from "react-redux";
 import { SingleValue } from "react-select";
+import { Link } from "react-router-dom";
 
 import { getUsersOptions } from "../../helpers/selectOptions";
 import State from "../../interfaces/state.interface";
@@ -47,25 +48,27 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
   );
 
   return (
-    <header className={cn(className, styles.header)} {...props}>
+    <header className={cn(className, styles.paintHeader)} {...props}>
       <div>
-        <h3>Mini-paint</h3>
+        <Link to="/">
+          <h3>Home</h3>
+        </Link>
       </div>
-      <div className={styles.header__actions}>{HeaderActions}</div>
+      <div className={styles.paintHeader__actions}>{HeaderActions}</div>
       <BurgerButton
-        className={styles.header__burgerButton}
+        className={styles.paintHeader__burgerButton}
         icon="menu"
         onClick={handleMenuOpen}
       />
       <Card
-        className={cn(styles.header__menu, {
-          [styles.header__menu_opened]: isOpened,
-          [styles.header__menu_closed]: !isOpened,
+        className={cn(styles.paintHeader__menu, {
+          [styles.paintHeader__menu_opened]: isOpened,
+          [styles.paintHeader__menu_closed]: !isOpened,
         })}
       >
-        <div className={styles.header__menu_content}>{HeaderActions}</div>
+        <div className={styles.paintHeader__menu_content}>{HeaderActions}</div>
         <BurgerButton
-          className={styles.header__menu_closeButton}
+          className={styles.paintHeader__menu_closeButton}
           icon="close"
           onClick={handleMenuClose}
         />
