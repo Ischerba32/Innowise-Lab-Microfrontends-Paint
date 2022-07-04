@@ -1,49 +1,49 @@
 .imageItem {
-  width: 25%;
-  padding: 10px;
+	width: 25%;
+	padding: 10px;
 
-  &:hover {
-    transform: translateY(-15px);
-    transition: transform 0.2s linear;
-  }
+	&:hover {
+		transform: translateY(-15px);
+		transition: transform 0.2s linear;
+	}
 
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
-  }
+	img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 10px 10px 0 0;
+	}
 
-  a {
-    text-decoration: none;
-  }
+	a {
+		text-decoration: none;
+	}
 
-  &__info {
-    text-align: center;
-    background: var(--card-blue);
-    border-radius: 0 0 10px 10px;
-    padding: 5px 0;
-    font-size: 15px;
+	&__info {
+		text-align: center;
+		background: var(--card-blue);
+		border-radius: 0 0 10px 10px;
+		padding: 5px 0;
+		font-size: 15px;
 
-    p {
-      margin: 0;
-    }
-  }
+		p {
+			margin: 0;
+		}
+	}
 }
 
 @media screen and (max-width: 991.98px) {
-  .imageItem {
-    width: 33%;
-  }
+	.imageItem {
+		width: 33%;
+	}
 }
 
 @media screen and (max-width: 767.98px) {
-  .imageItem {
-    width: 50%;
-  }
+	.imageItem {
+		width: 50%;
+	}
 }
 
 @media screen and (max-width: 575.98px) {
-  .imageItem {
-    width: 100%;
-  }
+	.imageItem {
+		width: 100%;
+	}
 }

@@ -1,4 +1,4 @@
 export interface ILoaderProps {
-  speed: number;
-  customText?: string;
+	speed: number;
+	customText?: string;
 }

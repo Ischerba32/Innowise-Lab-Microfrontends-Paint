@@ -1,19 +1,19 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
-import menu from "./burgerMenu.svg";
-import close from "./close.svg";
+import menu from './burgerMenu.svg';
+import close from './close.svg';
 
 export const icons = {
-  close,
-  menu,
+	close,
+	menu,
 };
 
 type IconName = keyof typeof icons;
 
 export interface ButtonIconProps
-  extends DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {
-  icon: IconName;
+	extends DetailedHTMLProps<
+		ButtonHTMLAttributes<HTMLButtonElement>,
+		HTMLButtonElement
+	> {
+	icon: IconName;
 }

@@ -1,17 +1,17 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import FilterState from "../../interfaces/filter.interface";
+import FilterState from '../../interfaces/filter.interface';
 
 const filterSlice = createSlice({
-  name: "filter",
-  initialState: {
-    user: "all",
-  },
-  reducers: {
-    filterImages: (state: FilterState, action: PayloadAction<string>) => {
-      state.user = action.payload;
-    },
-  },
+	name: 'filter',
+	initialState: {
+		user: 'all',
+	},
+	reducers: {
+		filterImages: (state: FilterState, action: PayloadAction<string>) => {
+			state.user = action.payload;
+		},
+	},
 });
 
 export const { filterImages } = filterSlice.actions;
