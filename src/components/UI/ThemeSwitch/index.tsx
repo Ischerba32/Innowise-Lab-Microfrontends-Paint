@@ -2,7 +2,8 @@ import { useTheme } from '../../../hooks/useTheme';
 import styles from './styles.module.scss';
 
 export const ThemeSwitch = (): JSX.Element => {
-	const { theme, dispatchTheme } = useTheme();
+	const { dispatchTheme } = useTheme();
+	const theme = window.store.theme;
 
 	const handleChangeTheme = () => {
 		theme === 'light' ? dispatchTheme('dark') : dispatchTheme('light');

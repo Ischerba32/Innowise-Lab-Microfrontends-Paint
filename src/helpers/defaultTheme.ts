@@ -1,4 +1,4 @@
 const isDarkTheme = window?.matchMedia('(prefers-color-scheme: dark)').matches;
-const defaultTheme = window.store.theme || (isDarkTheme ? 'dark' : 'light');
+const defaultTheme = window.store.theme;
 
-export default localStorage.getItem('app-theme') || defaultTheme;
+export default defaultTheme;
