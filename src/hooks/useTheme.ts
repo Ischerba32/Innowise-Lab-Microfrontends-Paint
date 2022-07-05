@@ -14,7 +14,7 @@ export const useTheme = (): UseThemeResult => {
 			window.store.setTheme(theme);
 			return dispatch(setTheme(theme));
 		},
-		[theme]
+		[theme, dispatch]
 	);
 
 	useEffect(() => {

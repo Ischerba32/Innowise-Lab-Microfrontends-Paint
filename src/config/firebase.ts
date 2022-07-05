@@ -1,10 +1,5 @@
 import * as firebase from 'firebase/app';
-import {
-	createUserWithEmailAndPassword,
-	getAuth,
-	signInWithEmailAndPassword,
-	signOut,
-} from 'firebase/auth';
+import { getAuth, signOut } from 'firebase/auth';
 import { getDatabase, ref, set } from 'firebase/database';
 import {
 	getDownloadURL,
@@ -14,7 +9,6 @@ import {
 } from 'firebase/storage';
 import moment from 'moment';
 
-import AuthFormParams from '../interfaces/authForm.interface';
 import { SaveImageParams } from '../interfaces/image.interface';
 
 const firebaseConfig = {
@@ -33,14 +27,6 @@ const storage = getStorage(app);
 export const auth = getAuth(app);
 export const database = getDatabase(app);
 
-export const handleSignIn = async ({ email, password }: AuthFormParams) => {
-	return await signInWithEmailAndPassword(auth, email, password);
-};
-
-export const handleSignUp = async ({ email, password }: AuthFormParams) => {
-	return await createUserWithEmailAndPassword(auth, email, password);
-};
-
 export const handleSignOut = async () => {
 	return await signOut(auth);
 };
@@ -58,14 +44,6 @@ const saveImageToDB = async (
 		userEmail: email,
 		image: url,
 		date: moment().format('YYYY-MM-DD'),
-	});
-};
-
-export const saveUserToDB = async (uid: string, email: string) => {
-	const newUserRef = ref(database, `users/${uid}`);
-	await set(newUserRef, {
-		uid,
-		email,
 	});
 };
 

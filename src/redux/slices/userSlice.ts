@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import AuthFormParams from '../../interfaces/authForm.interface';
 import UserState from '../../interfaces/user.interface';
 
 const userSlice = createSlice({
@@ -12,27 +11,6 @@ const userSlice = createSlice({
 		error: '',
 	},
 	reducers: {
-		signIn: (state: UserState, action: PayloadAction<AuthFormParams>) => {
-			state.isLoading = true;
-		},
-		signInSuccess: (state: UserState, action: PayloadAction<UserState>) => {
-			state.uid = action.payload.uid;
-			state.email = action.payload.email;
-			state.isLoading = false;
-			state.error = '';
-		},
-
-		signUp: (state: UserState, action: PayloadAction<AuthFormParams>) => {
-			state.isLoading = true;
-		},
-
-		signUpSuccess: (state: UserState, action: PayloadAction<UserState>) => {
-			state.uid = action.payload.uid;
-			state.email = action.payload.email;
-			state.isLoading = false;
-			state.error = '';
-		},
-
 		signOut: (state: UserState) => {
 			state.isLoading = true;
 		},
@@ -62,10 +40,6 @@ const userSlice = createSlice({
 });
 
 export const {
-	signIn,
-	signInSuccess,
-	signUp,
-	signUpSuccess,
 	signOut,
 	signOutSuccess,
 	authError,

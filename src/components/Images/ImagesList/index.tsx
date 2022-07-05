@@ -33,7 +33,7 @@ const ImagesList = () => {
 				if (snapshot.val()) {
 					dispatch(setImages(Object.values(snapshot.val())));
 				}
-				dispatch(getImagesSuccess());
+				setTimeout(() => dispatch(getImagesSuccess()), 1000);
 			});
 		}
 	}, [uid, dispatch]);
